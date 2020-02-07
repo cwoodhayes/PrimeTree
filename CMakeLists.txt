@@ -11,8 +11,9 @@ conan_basic_setup()
 
 # compile the test programs
 add_executable(primeTreeTests
-	include/PrimeTree.h
-	src/primeTreeTests.cpp)
+	src/primeTreeTests.cpp
+	src/PrimeTree.cpp
+	src/Primes.cpp)
 
 target_include_directories(primeTreeTests PUBLIC
 	include)
