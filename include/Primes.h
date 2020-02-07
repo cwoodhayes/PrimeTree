@@ -10,7 +10,7 @@ Header file containing prime numbers for use by the PrimeTree data structure.
 namespace Primes {
     typedef uint32_t prime_t;
 
-    extern prime_t base_prime_list[10000];
+    extern prime_t primes[10001];
 };
 
 #endif

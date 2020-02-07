@@ -21,10 +21,12 @@ Declarations for PrimeTree and PrimeTreeNode
  */
 class PrimeTreeNode
 {
+public:
+	PrimeTreeNode() : _nodePrime(0), _lineagePrime(0) {}
 private:
 	//bookkeeping values only to be accessed by PrimeTree methods
-	Primes::prime_t nodePrime;
-	Primes::prime_t lineagePrime;
+	Primes::prime_t _nodePrime;
+	Primes::prime_t _lineagePrime;
 	friend class PrimeTree;
 };
 
@@ -34,10 +36,11 @@ public:
 	PrimeTree();
 	PrimeTree(PrimeTreeNode& root);
 	void addElement(PrimeTreeNode& elem, PrimeTreeNode& parent);
-	void addElement(PrimeTreeNode& elem);
+	void addRootElement(PrimeTreeNode& elem);
 	void removeElement(PrimeTreeNode& elem);
-	bool isAncestor(PrimeTreeNode& elem, PrimeTreeNode& ancestorElem);
+	bool isAncestor(PrimeTreeNode& elem, PrimeTreeNode& ancestor);
 private:
+	uint32_t _size;	
 };
 
 #endif

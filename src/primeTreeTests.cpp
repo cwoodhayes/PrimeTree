@@ -36,7 +36,7 @@ namespace {
 			d e f
 		*/
 
-		pt.addElement(a);
+		pt.addRootElement(a);
 		pt.addElement(b, a);
 		pt.addElement(c, a);
 		pt.addElement(d, b);

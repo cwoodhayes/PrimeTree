@@ -13,7 +13,9 @@ namespace Primes
     //could increase or decrease how many primes you use based on your
     //memory/runtime constraints. More primes=faster operation for datasets
     //much larger than the number of primes.
-    prime_t base_prime_list[10000] = {
+
+    //of course, we're gonna call 1 a prime. the root node gets it.
+    prime_t primes[10001] = {1,
           2,      3,      5,      7,     11,     13,     17,     19,     23,     29, 
          31,     37,     41,     43,     47,     53,     59,     61,     67,     71, 
          73,     79,     83,     89,     97,    101,    103,    107,    109,    113, 
