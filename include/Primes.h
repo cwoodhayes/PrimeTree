@@ -2,8 +2,11 @@
 Header file containing prime numbers for use by the PrimeTree data structure.
 */
 
+#ifndef PRIMES_H
+#define PRIMES_H
+
 namespace Primes {
-    #if N_PRIMES_10000
+    #if N_PRIMES_10000  //currently this is the only option
     typedef uint32_t prime_t;
 
     //list of first 10,000 primes obtained from https://primes.utm.edu/lists/small/10000.txt
@@ -1011,3 +1014,5 @@ namespace Primes {
     ];
     #endif
 };
+
+#endif

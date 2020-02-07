@@ -4,7 +4,7 @@ Declarations and definitions for template class PrimeTree
 
 #include "Primes.h"
 
-#include <iostream>
+// #include <iostream>
 
 // user of the class must decide how many primes the tree should use,
 // based on the tradeoff between computational and memory efficiency.
@@ -21,6 +21,7 @@ class PrimeTree
 		PrimeTree();
 		PrimeTree(T& root);
 		void addElement(T& elem, T& parent);
+		void addElement(T& elem);
 		void removeElement(T& elem);
 		bool isAncestor(T& elem, T& ancestorElem);
 	private:
@@ -41,10 +42,34 @@ PrimeTree<T>::PrimeTree(T& root)
 	//instantiate the root node
 }
 
+/**
+ * @brief      Add a new element to the data structure. Must not already be in the structure
+ *             or else the graph will no longer be acyclic.
+ *
+ * @param      elem    The element to add
+ * @param      parent  The parent of elem in the graph. Must have already been added.
+ *
+ * @tparam     T       the type of elements stored in the PrimeTree
+ */
 template <typename T>
 void PrimeTree<T>::addElement(T& elem, T& parent)
 {
-	std::cout << &elem << std::endl;
+
+}
+
+/**
+ * @brief      Adds elem as a child to the most recently inserted element.
+ * 			   Really only useful for adding a root node after you've already
+ * 			   instantiated the class.
+ *
+ * @param      elem    The element
+ *
+ * @tparam     T       the type of elements stored in the PrimeTree
+ */
+template <typename T>
+void PrimeTree<T>::addElement(T& elem)
+{
+
 }
 
 template <typename T>

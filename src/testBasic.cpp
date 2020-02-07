@@ -6,8 +6,25 @@
 int main(int argc, char** argv)
 {
 	PrimeTree <int> pt;
-	int a=2, b=3;
-	std::cout << &a << std::endl;
-	pt.addElement(a, b);	
+	int a, b, c, d, e, f;
+
+	//test that pt detects the correct relationships
+	//in a very simple tree structure
+
+	//create the following structure:
+	/*
+			a
+		   / \
+		  b   c
+		 /|\
+		d e f
+	*/
+
+	pt.addElement(a);
+	pt.addElement(b, a);
+	pt.addElement(c, a);
+	pt.addElement(d, b);
+	pt.addElement(e, b);
+	pt.addElement(f, b);
 }
 
