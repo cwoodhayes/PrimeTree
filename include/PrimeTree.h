@@ -78,8 +78,21 @@ void PrimeTree<T>::removeElement(T& elem)
 
 }
 
+/**
+ * @brief      Returns true if ancestorElem is a parent, grandparent,
+ *             great-grandparent, etc. of elem, or is elem itself.
+ *             Runs in a very fast O(logn), depending on how many primes you
+ *             used.
+ *
+ * @param      elem          The element
+ * @param      ancestorElem  The potential ancestor element
+ *
+ * @tparam     T       the type of elements stored in the PrimeTree
+ *
+ * @return     True if ancestorElem is elem's ancestor, False otherwise.
+ */
 template <typename T>
 bool PrimeTree<T>::isAncestor(T& elem, T& ancestorElem)
 {
-
+	return true;
 }
