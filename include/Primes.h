@@ -6,11 +6,12 @@ Header file containing prime numbers for use by the PrimeTree data structure.
 #define PRIMES_H
 
 namespace Primes {
-    #if N_PRIMES_10000  //currently this is the only option
     typedef uint32_t prime_t;
 
     //list of first 10,000 primes obtained from https://primes.utm.edu/lists/small/10000.txt
-    prime_t* base_prime_list = [
+    //could increase or decrease how many primes you use to fit
+    //memory/runtime constraints.
+    prime_t base_prime_list[10000] = {
           2,      3,      5,      7,     11,     13,     17,     19,     23,     29, 
          31,     37,     41,     43,     47,     53,     59,     61,     67,     71, 
          73,     79,     83,     89,     97,    101,    103,    107,    109,    113, 
@@ -1011,8 +1012,7 @@ namespace Primes {
      104417, 104459, 104471, 104473, 104479, 104491, 104513, 104527, 104537, 104543, 
      104549, 104551, 104561, 104579, 104593, 104597, 104623, 104639, 104651, 104659, 
      104677, 104681, 104683, 104693, 104701, 104707, 104711, 104717, 104723, 104729
-    ];
-    #endif
+    };
 };
 
 #endif

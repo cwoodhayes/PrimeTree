@@ -2,14 +2,22 @@
 
 #include "gtest/gtest.h"
 
-#include "PrimeTree.h"
 #define N_PRIMES_10000
+#include "PrimeTree.h"
+
+//simple test class for testing the PrimeTree
+class IntegerNode : public PrimeTreeNode
+{
+public:
+	int val;
+};
 
 namespace {
 	TEST(PrimeTree, smallIsAncestor)
 	{
-		PrimeTree <int> pt;
-		int a, b, c, d, e, f;
+
+		PrimeTree pt;
+		IntegerNode a, b, c, d, e, f;
 
 		//test that pt detects the correct relationships
 		//in a very simple tree structure

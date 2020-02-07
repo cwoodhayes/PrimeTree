@@ -14,30 +14,39 @@ Declarations and definitions for template class PrimeTree
 // the following in your code:
 // #define N_PRIMES_10000
 
-template <typename T>
-class PrimeTree 
+/**
+ * @brief      All nodes stored in a PrimeTree must inherit from this
+ *             class.
+ */
+class PrimeTreeNode
 {
-	public:
-		PrimeTree();
-		PrimeTree(T& root);
-		void addElement(T& elem, T& parent);
-		void addElement(T& elem);
-		void removeElement(T& elem);
-		bool isAncestor(T& elem, T& ancestorElem);
-	private:
+private:
+	//bookkeeping values only to be accessed by PrimeTree methods
+	Primes::prime_t nodePrime;
+	Primes::prime_t lineagePrime;
+	friend class PrimeTree;
 };
 
-
+class PrimeTree 
+{
+public:
+	PrimeTree();
+	PrimeTree(PrimeTreeNode& root);
+	void addElement(PrimeTreeNode& elem, PrimeTreeNode& parent);
+	void addElement(PrimeTreeNode& elem);
+	void removeElement(PrimeTreeNode& elem);
+	bool isAncestor(PrimeTreeNode& elem, PrimeTreeNode& ancestorElem);
+private:
+};
 
 // METHOD DEFINITIONS /////////////////////////////////////////////////////////
-template <typename T>
-PrimeTree<T>::PrimeTree()
+PrimeTree::PrimeTree()
 {
 	//instantiate the root node
+
 }
 
-template <typename T>
-PrimeTree<T>::PrimeTree(T& root)
+PrimeTree::PrimeTree(PrimeTreeNode& root)
 {
 	//instantiate the root node
 }
@@ -51,8 +60,7 @@ PrimeTree<T>::PrimeTree(T& root)
  *
  * @tparam     T       the type of elements stored in the PrimeTree
  */
-template <typename T>
-void PrimeTree<T>::addElement(T& elem, T& parent)
+void PrimeTree::addElement(PrimeTreeNode& elem, PrimeTreeNode& parent)
 {
 
 }
@@ -66,14 +74,12 @@ void PrimeTree<T>::addElement(T& elem, T& parent)
  *
  * @tparam     T       the type of elements stored in the PrimeTree
  */
-template <typename T>
-void PrimeTree<T>::addElement(T& elem)
+void PrimeTree::addElement(PrimeTreeNode& elem)
 {
 
 }
 
-template <typename T>
-void PrimeTree<T>::removeElement(T& elem)
+void PrimeTree::removeElement(PrimeTreeNode& elem)
 {
 
 }
@@ -91,8 +97,7 @@ void PrimeTree<T>::removeElement(T& elem)
  *
  * @return     True if ancestorElem is elem's ancestor, False otherwise.
  */
-template <typename T>
-bool PrimeTree<T>::isAncestor(T& elem, T& ancestorElem)
+bool PrimeTree::isAncestor(PrimeTreeNode& elem, PrimeTreeNode& ancestorElem)
 {
 	return true;
 }
