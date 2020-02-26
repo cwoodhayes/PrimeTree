@@ -1,5 +1,5 @@
 # PrimeTree
-Implementation of a novel tree data structure providing fast checks of node ancestry. This data structure has never been published before, as far as I can tell Eventually I'll get around to writing a formal paper on it. At the moment, it is theoretically interesting, but not practically useful, due to the prime multiple overflow issue. 
+Implementation of a novel tree data structure providing fast checks of node ancestry. As best I can tell, I am the sole inventor of this method for checking ancestry in a DAG. Eventually I'll get around to writing a formal paper on it. At the moment, it is theoretically interesting, but not practically useful, due to the prime multiple overflow issue. 
 
 If any other math aficionados have ideas on how to efficiently compress the products of valid sequences of primes into a smaller space, I'd love to hear them.
 
